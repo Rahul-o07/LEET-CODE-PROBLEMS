@@ -4,12 +4,10 @@ import java.util.function.IntConsumer;
 class FizzBuzz {
     private int n;
     private int current = 1;
-    
-    // Semaphores to control thread execution
     private Semaphore fizzSem = new Semaphore(0);
     private Semaphore buzzSem = new Semaphore(0);
     private Semaphore fizzBuzzSem = new Semaphore(0);
-    private Semaphore numberSem = new Semaphore(1); // Start with number thread
+    private Semaphore numberSem = new Semaphore(1);
 
     public FizzBuzz(int n) {
         this.n = n;
